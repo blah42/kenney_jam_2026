@@ -29,4 +29,3 @@ offset = Vector2(8, 8)
 zoom = Vector2(4.225, 4.225)
 
 [node name="Node" type="Node" parent="." unique_id=345868180]
-

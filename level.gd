@@ -13,7 +13,6 @@ func _process(delta: float) -> void:
 	mapMove(map_speed,delta)
 	pass
 func mapMove(speed,delta):
-	
 	$Map.move_local_y(-delta*speed)
 	if($Map/MapSegment0.global_position.y < -150*2):
 		$Map/MapSegment0.move_local_y(screen_height*5)
