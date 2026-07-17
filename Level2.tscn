@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://djxriipvhiadl" path="res://level2.gd" id="1_q04gf"]
 [ext_resource type="PackedScene" uid="uid://bsn2e8rgwif04" path="res://Assets/MapSegments/MapSegment2.res" id="2_s8dg4"]
+[ext_resource type="PackedScene" uid="uid://bnim4r00wdgxw" path="res://Skiier.tscn" id="3_s8dg4"]
 
 [node name="Level" type="Node2D" unique_id=1521418637]
 script = ExtResource("1_q04gf")
@@ -9,20 +10,28 @@ script = ExtResource("1_q04gf")
 [node name="Map" type="Node2D" parent="." unique_id=2001627141]
 
 [node name="MapSegment0" parent="Map" unique_id=1013950515 instance=ExtResource("2_s8dg4")]
+z_as_relative = false
 
 [node name="MapSegment1" parent="Map" unique_id=875517424 instance=ExtResource("2_s8dg4")]
+z_as_relative = false
 position = Vector2(0, 144)
 
 [node name="MapSegment2" parent="Map" unique_id=739064224 instance=ExtResource("2_s8dg4")]
+z_as_relative = false
 position = Vector2(0, 288)
 
 [node name="MapSegment3" parent="Map" unique_id=389991816 instance=ExtResource("2_s8dg4")]
+z_as_relative = false
 position = Vector2(0, 432)
 
 [node name="MapSegment4" parent="Map" unique_id=1429207326 instance=ExtResource("2_s8dg4")]
+z_as_relative = false
 position = Vector2(0, 576)
 
 [node name="Player" type="Node2D" parent="." unique_id=1387407310]
+
+[node name="CharacterBody2D" parent="Player" unique_id=917730138 instance=ExtResource("3_s8dg4")]
+position = Vector2(93.62516, 61.753956)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1953882884]
 offset = Vector2(8, 8)

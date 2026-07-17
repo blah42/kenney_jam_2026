@@ -4,19 +4,27 @@ var map_speed = 200
 const screen_height = 9*16
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var character = preload("res://Skiier.tscn").instantiate()
-	$Player.add_child(character, true)
+	#var character = preload("res://Skiier.tscn").instantiate()
+	#$Player.add_child(character, true)
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	mapMove(map_speed,delta)
-	
+	#for child in $Map.get_children():
+		#for baby in child.get_node("colission").get_children():
+			#print(baby)
+			#for i in baby.get_slide_collision_count():
+				#var collisions = child.get_slide_collision(i)
+				#print("I collided with ", collisions.get_collider().name)
 	for child in $Player.get_children():
 		#print(child.z_index)
 		for i in child.get_slide_collision_count():
-			var collision = child.get_slide_collision(i)
-			print("I collided with ", collision.get_collider().name)
+			var collisions = child.get_slide_collision(i)
+			print("I collided with ", collisions.get_collider().name)
+			if(collisions.get_collider().name=="Skilift"):
+				print("Hey")
 func mapMove(speed,delta):
 	
 	$Map.move_local_y(-delta*speed)

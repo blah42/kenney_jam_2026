@@ -11,7 +11,7 @@ func _physics_process(delta: float) -> void:
 	var inputDir = Input.get_vector("Move Left", "Move Right", "Move Up", "Move Down")
 	velocity = inputDir * SPEED
 	move_and_slide()
-	
+	#print(position)
 	if Input.is_action_just_pressed("Scale"):
 		if state==0:
 			state = 1

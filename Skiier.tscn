@@ -32,7 +32,6 @@ texture_filter = 1
 script = ExtResource("1_tveen")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1446873399]
-z_index = 1
 z_as_relative = false
 shape = SubResource("RectangleShape2D_4hbd8")
 
