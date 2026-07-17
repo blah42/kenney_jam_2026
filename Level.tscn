@@ -1,25 +1,31 @@
 [gd_scene format=3 uid="uid://lestfyv8kxgk"]
 
+[ext_resource type="Script" uid="uid://cc5g72uuf00tt" path="res://level.gd" id="1_t7iv1"]
 [ext_resource type="PackedScene" uid="uid://bqugsrr3byxnm" path="res://Assets/MapSegments/MapSegment1.res" id="2_2nifc"]
 
-[sub_resource type="GDScript" id="GDScript_34hwx"]
-script/source = "extends Node2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	var character = preload(\"res://Skiier.tscn\").instantiate()
-	$Player.add_child(character, true)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
-
 [node name="Level" type="Node2D" unique_id=1521418637]
-script = SubResource("GDScript_34hwx")
+script = ExtResource("1_t7iv1")
 
-[node name="MapSegment1" parent="." unique_id=1013950515 instance=ExtResource("2_2nifc")]
+[node name="Map" type="Node2D" parent="." unique_id=2001627141]
+
+[node name="MapSegment0" parent="Map" unique_id=1013950515 instance=ExtResource("2_2nifc")]
+position = Vector2(0, -288)
+
+[node name="MapSegment1" parent="Map" unique_id=24354521 instance=ExtResource("2_2nifc")]
+position = Vector2(0, -144)
+
+[node name="MapSegment2" parent="Map" unique_id=1086675263 instance=ExtResource("2_2nifc")]
+
+[node name="MapSegment3" parent="Map" unique_id=33711590 instance=ExtResource("2_2nifc")]
+position = Vector2(0, 144)
+
+[node name="MapSegment4" parent="Map" unique_id=1272852953 instance=ExtResource("2_2nifc")]
+position = Vector2(0, 288)
 
 [node name="Player" type="Node2D" parent="." unique_id=1387407310]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1953882884]
+offset = Vector2(8, 8)
+zoom = Vector2(4.225, 4.225)
+
+[node name="Node" type="Node" parent="." unique_id=345868180]
