@@ -1,12 +1,27 @@
 [gd_scene format=3 uid="uid://dd5ujn1q50i2a"]
 
 [ext_resource type="Script" uid="uid://djxriipvhiadl" path="res://level2.gd" id="1_q04gf"]
+[ext_resource type="PackedScene" uid="uid://bsn2e8rgwif04" path="res://Assets/MapSegments/MapSegment5.res" id="2_s8dg4"]
 [ext_resource type="PackedScene" uid="uid://bnim4r00wdgxw" path="res://Skiier.tscn" id="3_s8dg4"]
 
 [node name="Level" type="Node2D" unique_id=1521418637]
 script = ExtResource("1_q04gf")
 
 [node name="Map" type="Node2D" parent="." unique_id=2001627141]
+
+[node name="MapSegment0" parent="Map" unique_id=1013950515 instance=ExtResource("2_s8dg4")]
+
+[node name="MapSegment1" parent="Map" unique_id=566242645 instance=ExtResource("2_s8dg4")]
+position = Vector2(0, 144)
+
+[node name="MapSegment2" parent="Map" unique_id=96177006 instance=ExtResource("2_s8dg4")]
+position = Vector2(0, 288)
+
+[node name="MapSegment3" parent="Map" unique_id=957786315 instance=ExtResource("2_s8dg4")]
+position = Vector2(0, 432)
+
+[node name="MapSegment4" parent="Map" unique_id=412232889 instance=ExtResource("2_s8dg4")]
+position = Vector2(0, 576)
 
 [node name="Player" type="Node2D" parent="." unique_id=1387407310]
 
