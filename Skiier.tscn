@@ -15,11 +15,11 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 20.0,
-"texture": ExtResource("2_m6gw1")
-}, {
-"duration": 20.0,
+"duration": 10.0,
 "texture": ExtResource("3_m6gw1")
+}, {
+"duration": 10.0,
+"texture": ExtResource("2_m6gw1")
 }],
 "loop": 1,
 "name": &"ski",

@@ -7,12 +7,17 @@
 [ext_resource type="Texture2D" uid="uid://e7xyb1dx4s7g" path="res://kenney_tiny-ski/Tiles/tile_0054.png" id="5_p5b0b"]
 [ext_resource type="Texture2D" uid="uid://dklb41hmdk00x" path="res://kenney_tiny-ski/Tiles/tile_0066.png" id="6_y6880"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t43np"]
+size = Vector2(279, 20)
+
 [node name="Area2D" type="Area2D" unique_id=882667593]
 
 [node name="Chair" type="Sprite2D" parent="." unique_id=740127137]
 texture = ExtResource("1_05rhm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1645229166]
+position = Vector2(-8.5, -11)
+shape = SubResource("RectangleShape2D_t43np")
 
 [node name="ChairConnection" type="Sprite2D" parent="." unique_id=7933446]
 position = Vector2(0, -16)
