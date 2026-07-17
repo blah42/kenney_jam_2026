@@ -28,4 +28,10 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	print("Detecion")
+	print(area.name)
+	if area.name == "Skilift":
+		if state == 1:
+			print("Lose")
+	elif area.name == "Snowman":
+		if state == 0:
+			print("Lose")
