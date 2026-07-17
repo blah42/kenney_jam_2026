@@ -12,7 +12,7 @@ func _physics_process(delta: float) -> void:
 	velocity = inputDir * SPEED
 	move_and_slide()
 	
-	if Input.is_action_just_pressed("Scale"):W
+	if Input.is_action_just_pressed("Scale"):
 		if state==0:
 			state = 1
 			$AnimatedSprite2D.scale = Vector2(2, 2)
@@ -24,4 +24,3 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.play()
 	else:
 		$AnimatedSprite2D.stop()
-	trail()
