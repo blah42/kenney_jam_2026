@@ -27,14 +27,12 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=917730138]
+texture_filter = 1
 position = Vector2(48, 40)
 script = ExtResource("1_tveen")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1446873399]
 shape = SubResource("RectangleShape2D_4hbd8")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1941795097]
-texture = ExtResource("2_m6gw1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=575280409]
 sprite_frames = SubResource("SpriteFrames_34hwx")
