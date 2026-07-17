@@ -14,6 +14,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	mapMove(map_speed,delta)
+	if($Player.global_position.y > 0): get_tree().quit() #replace with score and title screen
 	pass
 func mapMove(speed,delta):
 	$Map.move_local_y(-delta*speed)
@@ -22,7 +23,7 @@ func mapMove(speed,delta):
 		if(i.global_position.y < -screen_height*2):
 			i.move_local_y(screen_height*5)
 			var c = i.global_position
-			print(i)
+			#print(i)
 			i.queue_free()
 			var randMap = randi_range(1,3)
 			var d
