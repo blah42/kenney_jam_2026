@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
+const TRAIL_LEN = 16
 var state = 0
 
 
@@ -23,3 +24,4 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.play()
 	else:
 		$AnimatedSprite2D.stop()
+	trail()
