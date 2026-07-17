@@ -11,7 +11,7 @@ func _physics_process(delta: float) -> void:
 	var inputDir = Input.get_vector("Move Left", "Move Right", "Move Up", "Move Down")
 	velocity = inputDir * SPEED
 	move_and_slide()
-	
+	#print(position)
 	if Input.is_action_just_pressed("Scale"):
 		if state==0:
 			state = 1
@@ -24,3 +24,8 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.play()
 	else:
 		$AnimatedSprite2D.stop()
+		
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	print("Detecion")

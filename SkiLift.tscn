@@ -10,12 +10,15 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t43np"]
 size = Vector2(279, 20)
 
-[node name="Area2D" type="Area2D" unique_id=882667593]
+[node name="Skilift" type="Area2D" unique_id=521358295]
+texture_filter = 1
+disable_mode = 1
 
 [node name="Chair" type="Sprite2D" parent="." unique_id=740127137]
 texture = ExtResource("1_05rhm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1645229166]
+z_as_relative = false
 position = Vector2(-8.5, -11)
 shape = SubResource("RectangleShape2D_t43np")
 

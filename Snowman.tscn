@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_34hwx"]
 size = Vector2(8, 11)
 
-[node name="Snowman" type="Area2D" unique_id=24439272]
+[node name="Snowman" type="Area2D" unique_id=575411986]
 z_as_relative = false
 script = ExtResource("1_pbnak")
 
@@ -14,7 +14,7 @@ script = ExtResource("1_pbnak")
 texture = ExtResource("2_esr5b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1319161329]
+z_as_relative = false
+texture_filter = 1
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_34hwx")
-
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
