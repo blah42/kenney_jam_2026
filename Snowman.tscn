@@ -7,6 +7,7 @@
 size = Vector2(8, 11)
 
 [node name="Snowman" type="Area2D" unique_id=24439272]
+z_as_relative = false
 script = ExtResource("1_pbnak")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2048579138]

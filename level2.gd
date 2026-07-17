@@ -11,7 +11,12 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	mapMove(map_speed,delta)
-	pass
+	
+	for child in $Player.get_children():
+		#print(child.z_index)
+		for i in child.get_slide_collision_count():
+			var collision = child.get_slide_collision(i)
+			print("I collided with ", collision.get_collider().name)
 func mapMove(speed,delta):
 	
 	$Map.move_local_y(-delta*speed)

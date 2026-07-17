@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cbhhxffkurdlq" path="res://kenney_tiny-ski/Tiles/tile_0071.png" id="3_m6gw1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4hbd8"]
+resource_local_to_scene = true
 size = Vector2(16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_34hwx"]
@@ -28,10 +29,11 @@ animations = [{
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=917730138]
 texture_filter = 1
-position = Vector2(48, 40)
 script = ExtResource("1_tveen")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1446873399]
+z_index = 1
+z_as_relative = false
 shape = SubResource("RectangleShape2D_4hbd8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=575280409]
