@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn1h05tstb8ds"
-path="res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"
+uid="uid://16yq5lc3n8xs"
+path="res://.godot/imported/tile_0031.png-569f4da35a335a9e5583eeb40ae13f1c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=["res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"]
+source_file="res://kenney_tiny-ski/Tiles/tile_0031.png"
+dest_files=["res://.godot/imported/tile_0031.png-569f4da35a335a9e5583eeb40ae13f1c.ctex"]
 
 [params]
 
