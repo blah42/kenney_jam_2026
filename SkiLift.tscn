@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://dax8484yq7ak5"]
+
+[ext_resource type="Texture2D" uid="uid://bgd47prqm2lm6" path="res://kenney_tiny-ski/Tiles/tile_0057.png" id="1_05rhm"]
+[ext_resource type="Texture2D" uid="uid://b4cjt22q6hl2u" path="res://kenney_tiny-ski/Tiles/tile_0045.png" id="2_qjrlk"]
+[ext_resource type="Texture2D" uid="uid://ckoepxtms8vxa" path="res://kenney_tiny-ski/Tiles/tile_0046.png" id="3_f1xta"]
+[ext_resource type="Texture2D" uid="uid://kyr0t0jejofa" path="res://kenney_tiny-ski/Tiles/tile_0042.png" id="4_52lrr"]
+[ext_resource type="Texture2D" uid="uid://e7xyb1dx4s7g" path="res://kenney_tiny-ski/Tiles/tile_0054.png" id="5_p5b0b"]
+[ext_resource type="Texture2D" uid="uid://dklb41hmdk00x" path="res://kenney_tiny-ski/Tiles/tile_0066.png" id="6_y6880"]
+
+[node name="Area2D" type="Area2D" unique_id=882667593]
+
+[node name="Chair" type="Sprite2D" parent="." unique_id=740127137]
+texture = ExtResource("1_05rhm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1645229166]
+
+[node name="ChairConnection" type="Sprite2D" parent="." unique_id=7933446]
+position = Vector2(0, -16)
+texture = ExtResource("2_qjrlk")
+
+[node name="Wires" type="Node2D" parent="." unique_id=1492153607]
+position = Vector2(-16, -16)
+
+[node name="BlankWires" type="Sprite2D" parent="Wires" unique_id=244033909]
+texture = ExtResource("3_f1xta")
+
+[node name="BlankWires2" type="Sprite2D" parent="Wires" unique_id=1112877320]
+position = Vector2(32, 0)
+texture = ExtResource("3_f1xta")
+
+[node name="BlankWires3" type="Sprite2D" parent="Wires" unique_id=1982937116]
+position = Vector2(48, 0)
+texture = ExtResource("3_f1xta")
+
+[node name="BlankWires4" type="Sprite2D" parent="Wires" unique_id=1087553457]
+position = Vector2(64, 0)
+texture = ExtResource("3_f1xta")
+
+[node name="BlankWires5" type="Sprite2D" parent="Wires" unique_id=1442711798]
+position = Vector2(80, 0)
+texture = ExtResource("3_f1xta")
+
+[node name="BlankWires6" type="Sprite2D" parent="Wires" unique_id=1992172827]
+position = Vector2(96, 0)
+texture = ExtResource("3_f1xta")
+
+[node name="BlankWires7" type="Sprite2D" parent="Wires" unique_id=1706485139]
+position = Vector2(112, 0)
+texture = ExtResource("3_f1xta")
+
+[node name="BlankWires8" type="Sprite2D" parent="Wires" unique_id=960130843]
+position = Vector2(128, 0)
+texture = ExtResource("3_f1xta")
+
+[node name="BlankWires9" type="Sprite2D" parent="Wires" unique_id=1924858211]
+position = Vector2(-112, 0)
+texture = ExtResource("3_f1xta")
+
+[node name="BlankWires10" type="Sprite2D" parent="Wires" unique_id=1410501828]
+position = Vector2(-96, 0)
+texture = ExtResource("3_f1xta")
+
+[node name="BlankWires11" type="Sprite2D" parent="Wires" unique_id=1968018095]
+position = Vector2(-80, 0)
+texture = ExtResource("3_f1xta")
+
+[node name="BlankWires12" type="Sprite2D" parent="Wires" unique_id=308137776]
+position = Vector2(-64, 0)
+texture = ExtResource("3_f1xta")
+
+[node name="BlankWires13" type="Sprite2D" parent="Wires" unique_id=1005154022]
+position = Vector2(-48, 0)
+texture = ExtResource("3_f1xta")
+
+[node name="BlankWires14" type="Sprite2D" parent="Wires" unique_id=1601660720]
+position = Vector2(-32, 0)
+texture = ExtResource("3_f1xta")
+
+[node name="BlankWires15" type="Sprite2D" parent="Wires" unique_id=1240760390]
+position = Vector2(-16, 0)
+texture = ExtResource("3_f1xta")
+
+[node name="RightPole" type="Node2D" parent="." unique_id=1163574823]
+
+[node name="PostConnectorRight" type="Sprite2D" parent="RightPole" unique_id=10283762]
+position = Vector2(128, -15)
+texture = ExtResource("4_52lrr")
+
+[node name="MidLength" type="Sprite2D" parent="RightPole" unique_id=341209804]
+position = Vector2(128, 1)
+texture = ExtResource("5_p5b0b")
+
+[node name="MidLength2" type="Sprite2D" parent="RightPole" unique_id=59311928]
+position = Vector2(128, 17)
+texture = ExtResource("5_p5b0b")
+
+[node name="BottomLength" type="Sprite2D" parent="RightPole" unique_id=891694004]
+position = Vector2(-144, 33)
+texture = ExtResource("6_y6880")
+
+[node name="LeftPole" type="Node2D" parent="." unique_id=947252741]
+
+[node name="PostConnectorRight2" type="Sprite2D" parent="LeftPole" unique_id=1370543842]
+position = Vector2(-144, -15)
+texture = ExtResource("4_52lrr")
+
+[node name="MidLength" type="Sprite2D" parent="LeftPole" unique_id=381102333]
+position = Vector2(-144, 1)
+texture = ExtResource("5_p5b0b")
+
+[node name="MidLength2" type="Sprite2D" parent="LeftPole" unique_id=154774974]
+position = Vector2(-144, 17)
+texture = ExtResource("5_p5b0b")
+
+[node name="BottomLength2" type="Sprite2D" parent="LeftPole" unique_id=1765258697]
+position = Vector2(128, 33)
+texture = ExtResource("6_y6880")
