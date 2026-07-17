@@ -1,7 +1,41 @@
 [gd_scene format=3 uid="uid://bnim4r00wdgxw"]
 
+[ext_resource type="Script" uid="uid://3ct8j2l2sdl5" path="res://skiier.gd" id="1_tveen"]
+[ext_resource type="Texture2D" uid="uid://dcyt30jv65aiy" path="res://kenney_tiny-ski/Tiles/tile_0070.png" id="2_m6gw1"]
+[ext_resource type="Texture2D" uid="uid://dkj3hcw6wdcu4" path="res://kenney_tiny-ski/Tiles/tile_0071.png" id="3_m6gw1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4hbd8"]
+size = Vector2(16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_34hwx"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 20.0,
+"texture": ExtResource("2_m6gw1")
+}, {
+"duration": 20.0,
+"texture": ExtResource("3_m6gw1")
+}],
+"loop": 1,
+"name": &"ski",
+"speed": 60.0
+}]
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=917730138]
+script = ExtResource("1_tveen")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1446873399]
+shape = SubResource("RectangleShape2D_4hbd8")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1941795097]
+texture = ExtResource("2_m6gw1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=575280409]
+sprite_frames = SubResource("SpriteFrames_34hwx")
+animation = &"ski"
+frame_progress = 0.9036115
