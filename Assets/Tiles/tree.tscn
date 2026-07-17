@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bgmahm6kkr0l1"]
 
-[ext_resource type="Texture2D" uid="uid://ddtgy6ixomwh4" path="res://kenney_tiny-ski/Tiles/tile_0006.png" id="1_ysvep"]
-[ext_resource type="Texture2D" uid="uid://731gcpntbj6o" path="res://kenney_tiny-ski/Tiles/tile_0018.png" id="2_kmkhn"]
+[ext_resource type="Texture2D" uid="uid://b0xd376qsvj6b" path="res://kenney_tiny-ski/Tiles/tile_0006.png" id="1_ysvep"]
+[ext_resource type="Texture2D" uid="uid://bfihqkishhx8b" path="res://kenney_tiny-ski/Tiles/tile_0018.png" id="2_kmkhn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ypyg"]
 radius = 5.0
@@ -17,8 +17,9 @@ texture_filter = 1
 position = Vector2(0, 16)
 texture = ExtResource("2_kmkhn")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=359277819]
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=2146923786]
+gravity_scale = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=642601949]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=642601949]
 position = Vector2(0, 8)
 shape = SubResource("CapsuleShape2D_8ypyg")
