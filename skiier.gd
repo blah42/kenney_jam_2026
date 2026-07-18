@@ -31,9 +31,13 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		print(area.name)
 		if area.name == "Skilift":
 			if state == 1:
-				print("Lose")
+				loseState()
 		elif area.name == "Snowman":
 			if state == 0:
-				print("Lose")
+				loseState()
 		elif area.name=="Tree":
-			print("Lose")
+			loseState()
+			
+func loseState():
+	get_tree().paused = true
+	#$pause_popup.show()
