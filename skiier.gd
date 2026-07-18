@@ -4,7 +4,10 @@ extends CharacterBody2D
 const SPEED = 80
 const TRAIL_LEN = 16
 var state = 0
+var lose = false
 
+func _ready() -> void:
+	$EndScreen.hide()
 
 func _physics_process(delta: float) -> void:
 
@@ -25,15 +28,22 @@ func _physics_process(delta: float) -> void:
 	else:
 		$AnimatedSprite2D.stop()
 		
-
-
 func _on_area_2d_area_entered(area: Area2D) -> void:
-		print(area.name)
+		#print(area.name)
 		if area.name == "Skilift":
 			if state == 1:
-				print("Lose")
+				loseState()
 		elif area.name == "Snowman":
 			if state == 0:
-				print("Lose")
+				loseState()
 		elif area.name=="Tree":
-			print("Lose")
+			loseState()
+
+func loseState():
+	lose = true
+	get_tree().paused = true
+	$EndScreen.show()
+
+func _on_button_pressed() -> void:
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://Level.tscn")
