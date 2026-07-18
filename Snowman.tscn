@@ -19,3 +19,5 @@ z_as_relative = false
 texture_filter = 1
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_34hwx")
+
+[connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]

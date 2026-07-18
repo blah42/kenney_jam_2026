@@ -9,3 +9,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	#print(position)
 	pass
+
+
+func _on_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	$Sprite2D.scale.y = .2
+	$CollisionShape2D.disabled = true
+	pass # Replace with function body.
