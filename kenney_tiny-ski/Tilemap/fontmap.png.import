@@ -1,0 +1,25 @@
+[remap]
+
+importer="font_data_image"
+type="FontFile"
+uid="uid://1lvjrx3aic3"
+path="res://.godot/imported/fontmap.png-c2e41854b9e1f0e89e00cb0cc0c3a554.fontdata"
+
+[deps]
+
+source_file="res://kenney_tiny-ski/Tilemap/fontmap.png"
+dest_files=["res://.godot/imported/fontmap.png-c2e41854b9e1f0e89e00cb0cc0c3a554.fontdata"]
+
+[params]
+
+character_ranges=PackedStringArray("U+0100-U+0153", "U+0030-U+0039", "U+003B-U+003C", "\'a\'-\'z\'", "U+0040-U+0049", "0x20")
+kerning_pairs=PackedStringArray()
+columns=12
+rows=11
+image_margin=Rect2i(-2, -1, 0, 0)
+character_margin=Rect2i(3, 0, 0, 0)
+ascent=0
+descent=0
+fallbacks=[]
+compress=true
+scaling_mode=1

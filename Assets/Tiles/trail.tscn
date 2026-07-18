@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bp8vttlfe1lny"]
+
+[ext_resource type="Texture2D" uid="uid://du534is7sdx4d" path="res://kenney_tiny-ski/Tiles/tile_0058.png" id="1_b78je"]
+
+[node name="Trail" type="Node2D" unique_id=1089823924]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1780297431]
+texture_filter = 1
+texture = ExtResource("1_b78je")
