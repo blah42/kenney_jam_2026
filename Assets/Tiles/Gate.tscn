@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b6s2i1imvi6ji"]
+
+[ext_resource type="Script" uid="uid://b5v8r5yrm8m03" path="res://Assets/Tiles/gate.gd" id="1_c36y5"]
+[ext_resource type="Texture2D" uid="uid://bn7sqj6n33i42" path="res://kenney_tiny-ski/Tiles/tile_0032.png" id="1_w150l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ypyg"]
+size = Vector2(34, 9.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ydl6"]
+size = Vector2(15, 15.5)
+
+[node name="Gate" type="Node2D" unique_id=267899339]
+script = ExtResource("1_c36y5")
+
+[node name="Tile0033" type="Sprite2D" parent="." unique_id=1092374836]
+texture_filter = 1
+texture = ExtResource("1_w150l")
+flip_h = true
+
+[node name="Tile0032" type="Sprite2D" parent="." unique_id=330965166]
+texture_filter = 1
+position = Vector2(50, 0)
+texture = ExtResource("1_w150l")
+
+[node name="GateScore" type="Area2D" parent="." unique_id=51152854]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GateScore" unique_id=908194111]
+position = Vector2(25, 2.75)
+shape = SubResource("RectangleShape2D_8ypyg")
+debug_color = Color(0.9827818, 0, 0.36331525, 0.41960785)
+
+[node name="GateHit" type="Area2D" parent="." unique_id=1292975583]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GateHit" unique_id=1211899336]
+position = Vector2(-0.5, 0.25)
+shape = SubResource("RectangleShape2D_1ydl6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="GateHit" unique_id=835548605]
+position = Vector2(50, 1)
+shape = SubResource("RectangleShape2D_1ydl6")
+
+[connection signal="area_shape_entered" from="GateScore" to="." method="_on_gate_score_area_shape_entered"]

@@ -30,6 +30,10 @@ func _physics_process(delta: float) -> void:
 		
 func _on_area_2d_area_entered(area: Area2D) -> void:
 		#print(area.name)
+		if area.name == "flag":
+			score()
+		if area.name == "GateScore":
+			score()
 		if area.name == "Skilift":
 			if state == 1:
 				loseState()
@@ -38,7 +42,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 				loseState()
 		elif area.name=="Tree":
 			loseState()
-
+func score():
+	pass
 func loseState():
 	lose = true
 	get_tree().paused = true
