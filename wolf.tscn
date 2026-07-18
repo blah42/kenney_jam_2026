@@ -35,6 +35,8 @@ size = Vector2(16, 16)
 
 [node name="Wolf" type="CharacterBody2D" unique_id=507797289]
 texture_filter = 1
+collision_layer = 128
+collision_mask = 128
 script = ExtResource("1_ol4uw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=450899951]
