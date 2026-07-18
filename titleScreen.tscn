@@ -32,9 +32,10 @@ zoom = Vector2(4.2, 4.2)
 [node name="Node" type="Node" parent="." unique_id=345868180]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=649014506]
+z_index = 30
 offset_left = -72.0
 offset_top = 39.0
-offset_right = 73.0
+offset_right = 82.0
 offset_bottom = 105.0
 
 [node name="Start" type="Button" parent="VBoxContainer" unique_id=371120419]
@@ -48,6 +49,7 @@ theme = ExtResource("3_3b4xv")
 text = "how to play"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=669932648]
+z_index = 30
 offset_left = -68.0
 offset_top = -88.0
 offset_right = 69.0
