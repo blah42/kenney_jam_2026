@@ -25,15 +25,18 @@ position = Vector2(0, 288)
 
 [node name="Player" type="Node2D" parent="." unique_id=1387407310]
 
+[node name="Score" type="RichTextLabel" parent="." unique_id=1200740378]
+z_index = 740
+texture_filter = 1
+offset_left = -108.0
+offset_top = -133.0
+offset_right = -1.0
+offset_bottom = -105.0
+theme = ExtResource("3_2nifc")
+scroll_active = false
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1953882884]
 offset = Vector2(8, 0)
 zoom = Vector2(4.2, 4.2)
 
 [node name="Node" type="Node" parent="." unique_id=345868180]
-
-[node name="Score" type="RichTextLabel" parent="." unique_id=1200740378]
-z_index = 2
-offset_top = -33.0
-offset_right = 107.0
-offset_bottom = 1.0
-theme = ExtResource("3_2nifc")

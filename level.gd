@@ -1,7 +1,6 @@
 extends Node2D
 
 var map_speed = 170 
-var score = 0
 const screen_height = 9*16
 var map1 = preload("res://Assets/MapSegments/MapSegment1.res")
 var map2 = preload("res://Assets/MapSegments/MapSegment5.res")
@@ -9,6 +8,7 @@ var map3 = preload("res://Assets/MapSegments/MapSegment3.res")
 var map4 = preload("res://Assets/MapSegments/MapSegment4.res")
 var map5 = preload("res://Assets/MapSegments/MapSegment6.res")
 var map6 = preload("res://Assets/MapSegments/MapSegment7.res")
+var map7 = preload("res://Assets/MapSegments/MapSegment8.res")
 
 
 # Called when the node enters the scene tree for the first time.
@@ -21,8 +21,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	$Score.text = str(score)
-	score = score + 1
+	$Score.text = str(Global.score)
+	Global.score = Global.score + 1
 	mapMove(map_speed,delta)
 	if($Player.global_position.y > 0): get_tree().quit() #replace with score and title screen
 	pass
@@ -49,8 +49,10 @@ func mapMove(speed,delta):
 					d = map4.instantiate()
 				5:
 					d = map5.instantiate()
-				5:
+				6:
 					d = map6.instantiate()
+				7:
+					d = map7.instantiate()
 				_:
 					d = map3.instantiate()
 			d.global_position = c

@@ -34,9 +34,9 @@ zoom = Vector2(4.2, 4.2)
 
 [node name="StartMenu" type="VBoxContainer" parent="." unique_id=649014506]
 z_index = 30
-offset_left = -72.0
+offset_left = -82.0
 offset_top = 39.0
-offset_right = 82.0
+offset_right = 85.0
 offset_bottom = 105.0
 
 [node name="Start" type="Button" parent="StartMenu" unique_id=371120419]

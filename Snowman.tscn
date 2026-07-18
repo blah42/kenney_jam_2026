@@ -11,6 +11,7 @@ z_as_relative = false
 script = ExtResource("1_pbnak")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2048579138]
+texture_filter = 1
 texture = ExtResource("2_esr5b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1319161329]
