@@ -20,6 +20,7 @@ boot_splash/minimum_display_time=200
 [autoload]
 
 Global="*uid://d325ugc2aiuj3"
+AudioStreamPlayerGlobal="*uid://dlja0qq1wqylc"
 
 [display]
 

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cdd7dmq3ccoks" path="res://titlescreen.gd" id="1_tic01"]
 [ext_resource type="PackedScene" uid="uid://bqugsrr3byxnm" path="res://Assets/MapSegments/MapSegment1.res" id="2_3b4xv"]
 [ext_resource type="Theme" uid="uid://cup1lbrwb8kmn" path="res://button.tres" id="3_3b4xv"]
+[ext_resource type="AudioStream" uid="uid://bq6orovgtwtew" path="res://Assets/geoffharvey-snow-is-coming-427915.mp3" id="4_yqvil"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_tu3jk"]
 action = &"ui_accept"
@@ -102,6 +103,11 @@ fit_content = true
 layout_mode = 2
 theme = ExtResource("3_3b4xv")
 text = "ok"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1808958980]
+stream = ExtResource("4_yqvil")
+volume_db = -30.105
+parameters/looping = true
 
 [connection signal="pressed" from="StartMenu/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="StartMenu/HowToPlay" to="." method="_on_how_to_play_pressed"]
