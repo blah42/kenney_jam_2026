@@ -28,6 +28,7 @@ var wolfProb = 1
 var wolfRate = 1000
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$AudioStreamPlayer.play()
 	var character = preload("res://Skiier.tscn").instantiate()
 	$Player.add_child(character, true)
 	var startPosition = Vector2(-120, -120)
@@ -36,7 +37,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Global.score>200:
+	if Global.score>500:
 		lowerBound = 20
 		wolfRate = 200
 	wolfProb = randi()%wolfRate
