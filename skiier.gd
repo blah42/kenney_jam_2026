@@ -35,3 +35,5 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		elif area.name == "Snowman":
 			if state == 0:
 				print("Lose")
+		elif area.name=="Tree":
+			print("Lose")
