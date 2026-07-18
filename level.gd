@@ -1,11 +1,14 @@
 extends Node2D
 
-var map_speed = 100 
+var map_speed = 170 
 var score = 0
 const screen_height = 9*16
 var map1 = preload("res://Assets/MapSegments/MapSegment1.res")
 var map2 = preload("res://Assets/MapSegments/MapSegment5.res")
 var map3 = preload("res://Assets/MapSegments/MapSegment3.res")
+var map4 = preload("res://Assets/MapSegments/MapSegment4.res")
+var map5 = preload("res://Assets/MapSegments/MapSegment6.res")
+var map6 = preload("res://Assets/MapSegments/MapSegment7.res")
 
 
 # Called when the node enters the scene tree for the first time.
@@ -33,7 +36,7 @@ func mapMove(speed,delta):
 			var c = i.global_position
 			#print(i)
 			i.queue_free()
-			var randMap = randi_range(1,3)
+			var randMap = randi_range(1,5)
 			var d
 			match randMap:
 				1:
@@ -42,6 +45,12 @@ func mapMove(speed,delta):
 					d = map2.instantiate()
 				3:
 					d = map3.instantiate()
+				4:
+					d = map4.instantiate()
+				5:
+					d = map5.instantiate()
+				5:
+					d = map6.instantiate()
 				_:
 					d = map3.instantiate()
 			d.global_position = c
