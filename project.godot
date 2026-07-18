@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="kenny_jam_2026"
-run/main_scene="uid://lestfyv8kxgk"
+run/main_scene="uid://bl8xlfhkn86ol"
 config/features=PackedStringArray("4.7")
 config/icon="res://icon.png"
 
