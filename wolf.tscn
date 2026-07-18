@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://35f76jhcxhdj"]
+
+[ext_resource type="Script" uid="uid://s2tf4nwv5vy5" path="res://wolf.gd" id="1_ol4uw"]
+[ext_resource type="Texture2D" uid="uid://ogipkkkfdaw7" path="res://kenney_tiny-ski/Tiles/tile_0080.png" id="2_sbym6"]
+[ext_resource type="Texture2D" uid="uid://bhpo1rovrepy3" path="res://kenney_tiny-ski/Tiles/tile_0078.png" id="3_btw7w"]
+[ext_resource type="Texture2D" uid="uid://bkbb1r2bwp8cv" path="res://kenney_tiny-ski/Tiles/tile_0079.png" id="4_2rpk5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_34hwx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sbym6")
+}],
+"loop": 1,
+"name": &"killMove",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("3_btw7w")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_2rpk5")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dslx2"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_34hwx"]
+size = Vector2(16, 16)
+
+[node name="Wolf" type="CharacterBody2D" unique_id=507797289]
+script = ExtResource("1_ol4uw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=450899951]
+sprite_frames = SubResource("SpriteFrames_34hwx")
+animation = &"killMove"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=713011891]
+shape = SubResource("RectangleShape2D_dslx2")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1880015811]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=58431488]
+shape = SubResource("RectangleShape2D_34hwx")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
