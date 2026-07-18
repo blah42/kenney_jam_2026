@@ -1,6 +1,6 @@
 extends Node2D
 
-var map_speed = 170 
+var map_speed = 140 
 const screen_height = 9*16
 var map1 = preload("res://Assets/MapSegments/MapSegment1.res")
 var map2 = preload("res://Assets/MapSegments/MapSegment5.res")
@@ -33,7 +33,7 @@ func _process(delta: float) -> void:
 			$Enemies.add_child(wolfy, true)
 	
 	$Score.text = str(Global.score)
-	Global.score = Global.score + 1
+	#Global.score = Global.score + 1
 	mapMove(map_speed,delta)
 	if($Player.global_position.y > 0): get_tree().quit() #replace with score and title screen
 	pass
