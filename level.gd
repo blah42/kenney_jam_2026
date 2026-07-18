@@ -9,6 +9,9 @@ var map4 = preload("res://Assets/MapSegments/MapSegment4.res")
 var map5 = preload("res://Assets/MapSegments/MapSegment6.res")
 var map6 = preload("res://Assets/MapSegments/MapSegment7.res")
 var map7 = preload("res://Assets/MapSegments/MapSegment8.res")
+var map8 = preload("res://Assets/MapSegments/MapSegment9.res")
+var map9 = preload("res://Assets/MapSegments/MapSegment10.res")
+var map10 = preload("res://Assets/MapSegments/MapSegment11.res")
 
 
 # Called when the node enters the scene tree for the first time.
@@ -36,7 +39,7 @@ func mapMove(speed,delta):
 			var c = i.global_position
 			#print(i)
 			i.queue_free()
-			var randMap = randi_range(1,5)
+			var randMap = randi_range(1,11)
 			var d
 			match randMap:
 				1:
@@ -53,6 +56,12 @@ func mapMove(speed,delta):
 					d = map6.instantiate()
 				7:
 					d = map7.instantiate()
+				8:
+					d = map8.instantiate()
+				9:
+					d = map9.instantiate()
+				10:
+					d = map10.instantiate()
 				_:
 					d = map3.instantiate()
 			d.global_position = c
