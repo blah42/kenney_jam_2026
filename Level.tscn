@@ -5,6 +5,7 @@
 [ext_resource type="Theme" uid="uid://cup1lbrwb8kmn" path="res://button.tres" id="3_2nifc"]
 [ext_resource type="PackedScene" uid="uid://cocng8dmhg3tx" path="res://Assets/MapSegments/MapSegment13.res" id="3_q4iis"]
 [ext_resource type="PackedScene" uid="uid://cvdjp48f05id6" path="res://Assets/MapSegments/MapSegment15.res" id="5_m3clv"]
+[ext_resource type="AudioStream" uid="uid://bq6orovgtwtew" path="res://Assets/geoffharvey-snow-is-coming-427915.mp3" id="6_m3clv"]
 
 [node name="Level" type="Node2D" unique_id=1521418637]
 script = ExtResource("1_t7iv1")
@@ -85,3 +86,8 @@ zoom = Vector2(4.2, 4.2)
 [node name="Node" type="Node" parent="." unique_id=345868180]
 
 [node name="Enemies" type="Node2D" parent="." unique_id=1616388242]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=409800774]
+stream = ExtResource("6_m3clv")
+volume_db = -30.105
+parameters/looping = true
