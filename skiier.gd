@@ -34,10 +34,10 @@ func _physics_process(delta: float) -> void:
 func _on_area_2d_area_entered(area: Area2D) -> void:
 		if area.name == "flag":
 			if state == 0:
-				score()
+				score(10)
 		elif area.name == "GateScore":
 			if state == 1:
-				score()
+				score(50)
 		elif area.name == "Skilift":
 			if state == 1:
 				loseState()
@@ -45,15 +45,15 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			if state == 0:
 				loseState()
 			if state == 1:
-				score()
+				score(5)
 		elif area.name=="Tree":
 			loseState()
 		elif area.name=="Wolf":
 			if state==0:
 				loseState()
 				
-func score():
-	Global.score += 10
+func score(amount: int):
+	Global.score += amount
 	
 func loseState():
 	get_tree().change_scene_to_file("res://endScreen.tscn")
