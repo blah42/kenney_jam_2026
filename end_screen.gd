@@ -1,5 +1,7 @@
 extends Node2D
 
+
+# Called when the node enters the scene tree for the first time.
 var map_speed = 20 
 const screen_height = 9*16
 var map1 = preload("res://Assets/MapSegments/MapSegment1.res")
@@ -7,8 +9,8 @@ var map2 = preload("res://Assets/MapSegments/MapSegment5.res")
 var map3 = preload("res://Assets/MapSegments/MapSegment3.res")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Global.score = 0
-	var character = preload("res://Skiier.tscn").instantiate()
+	$Score.text = str(Global.score)
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -40,20 +42,6 @@ func mapMove(speed,delta):
 pass
 
 
-func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://Level.tscn")
-	pass # Replace with function body.
-
-
-func _on_ok_pressed() -> void:
-	$StartMenu.show()
-	$Title.show()
-	$HowToPlay.hide()
-	pass # Replace with function body.
-
-
-func _on_how_to_play_pressed() -> void:
-	$StartMenu.hide()
-	$Title.hide()
-	$HowToPlay.show()
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://titleScreen.tscn")
 	pass # Replace with function body.

@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://8j0nrsyyx0jf"]
+
+[ext_resource type="Script" uid="uid://dnnsi35fmwgj6" path="res://end_screen.gd" id="1_670qs"]
+[ext_resource type="PackedScene" uid="uid://bqugsrr3byxnm" path="res://Assets/MapSegments/MapSegment1.res" id="2_rp5ay"]
+[ext_resource type="Theme" uid="uid://cup1lbrwb8kmn" path="res://button.tres" id="3_fwu3s"]
+
+[node name="endscreen" type="Node2D" unique_id=1521418637]
+texture_filter = 1
+script = ExtResource("1_670qs")
+
+[node name="Map" type="Node2D" parent="." unique_id=2001627141]
+
+[node name="MapSegment0" parent="Map" unique_id=1013950515 instance=ExtResource("2_rp5ay")]
+position = Vector2(0, -288)
+
+[node name="MapSegment1" parent="Map" unique_id=24354521 instance=ExtResource("2_rp5ay")]
+position = Vector2(0, -144)
+
+[node name="MapSegment2" parent="Map" unique_id=1086675263 instance=ExtResource("2_rp5ay")]
+
+[node name="MapSegment3" parent="Map" unique_id=33711590 instance=ExtResource("2_rp5ay")]
+position = Vector2(0, 144)
+
+[node name="MapSegment4" parent="Map" unique_id=1272852953 instance=ExtResource("2_rp5ay")]
+position = Vector2(0, 288)
+
+[node name="Player" type="Node2D" parent="." unique_id=1387407310]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1953882884]
+offset = Vector2(8, 0)
+zoom = Vector2(4.2, 4.2)
+
+[node name="Node" type="Node" parent="." unique_id=345868180]
+
+[node name="Score" type="RichTextLabel" parent="." unique_id=1508695662]
+z_index = 30
+z_as_relative = false
+offset_left = -3.0
+offset_top = -36.0
+offset_right = 97.0
+offset_bottom = 4.0
+theme = ExtResource("3_fwu3s")
+text = "score"
+fit_content = true
+
+[node name="EndScreen" type="VBoxContainer" parent="." unique_id=1770052165]
+process_mode = 3
+z_index = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -90.0
+offset_top = -86.0
+offset_right = 101.0
+offset_bottom = 86.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_fwu3s")
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="EndScreen" unique_id=264306380]
+propagate_maximum_size = true
+layout_mode = 2
+text = "game over"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="EndScreen" unique_id=479086909]
+propagate_maximum_size = true
+layout_mode = 2
+text = "score; "
+fit_content = true
+
+[node name="Button" type="Button" parent="EndScreen" unique_id=1801694196]
+layout_mode = 2
+theme = ExtResource("3_fwu3s")
+text = "restart"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="EndScreen" unique_id=1013915998]
+propagate_maximum_size = true
+layout_mode = 2
+text = "thanks for playing"
+fit_content = true
+horizontal_alignment = 1
+
+[connection signal="pressed" from="EndScreen/Button" to="." method="_on_button_pressed"]
