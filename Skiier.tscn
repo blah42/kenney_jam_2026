@@ -44,9 +44,9 @@ frame_progress = 0.9036115
 z_as_relative = false
 shape = SubResource("RectangleShape2D_4hbd8")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1055674802]
+[node name="Skiier" type="Area2D" parent="." unique_id=1055674802]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=229203372]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skiier" unique_id=229203372]
 shape = SubResource("RectangleShape2D_34hwx")
 
 [node name="EndScreen" type="VBoxContainer" parent="." unique_id=1884196892]
@@ -74,5 +74,5 @@ layout_mode = 2
 theme = ExtResource("4_fpnxl")
 text = "restart"
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Skiier" to="." method="_on_area_2d_area_entered"]
 [connection signal="pressed" from="EndScreen/Button" to="." method="_on_button_pressed"]
