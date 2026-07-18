@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dlja0qq1wqylc"]
+
+[ext_resource type="AudioStream" uid="uid://bq6orovgtwtew" path="res://Assets/geoffharvey-snow-is-coming-427915.mp3" id="1_td4n3"]
+[ext_resource type="Script" uid="uid://u0hsirs2k37s" path="res://audio_stream_player.gd" id="2_i5m0e"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=1255341623]
+stream = ExtResource("1_td4n3")
+volume_db = -32.977
+autoplay = true
+parameters/looping = true
+script = ExtResource("2_i5m0e")

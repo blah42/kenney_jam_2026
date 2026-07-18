@@ -7,6 +7,8 @@ var map2 = preload("res://Assets/MapSegments/MapSegment5.res")
 var map3 = preload("res://Assets/MapSegments/MapSegment3.res")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Global.music = $AudioStreamPlayer
+	#Global.music.play()
 	Global.score = 0
 	var character = preload("res://Skiier.tscn").instantiate()
 

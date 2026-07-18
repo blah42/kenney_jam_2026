@@ -1,6 +1,6 @@
 extends Node2D
 
-var map_speed = 100 
+var map_speed = 50 
 const screen_height = 9*16
 var map1 = preload("res://Assets/MapSegments/MapSegment1.res")
 var map2 = preload("res://Assets/MapSegments/MapSegment5.res")
@@ -28,7 +28,6 @@ var wolfProb = 1
 var wolfRate = 1000
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$AudioStreamPlayer.play()
 	var character = preload("res://Skiier.tscn").instantiate()
 	$Player.add_child(character, true)
 	var startPosition = Vector2(-120, -120)
@@ -37,6 +36,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if Global.tutorial == 3:
+		map_speed = 100
 	if Global.score>500:
 		lowerBound = 20
 		wolfRate = 200
@@ -60,6 +61,8 @@ func mapMove(speed,delta):
 	$Map.move_local_y(-delta*speed)
 	for i in $Map.get_children(false):
 		if(i.global_position.y < -screen_height*2):
+			if Global.tutorial < 3:
+				Global.tutorial += 1
 			i.move_local_y(screen_height*5)
 			var c = i.global_position
 			i.queue_free()
