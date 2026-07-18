@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_34hwx"]
 size = Vector2(8, 11)
 
-[node name="Snowman" type="Area2D" unique_id=575411986]
+[node name="Snowman" type="Area2D" unique_id=575411986 groups=["Snowman"]]
 z_as_relative = false
 script = ExtResource("1_pbnak")
 
@@ -20,4 +20,4 @@ texture_filter = 1
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_34hwx")
 
-[connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

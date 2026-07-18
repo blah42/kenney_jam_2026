@@ -24,6 +24,10 @@ Global="*uid://d325ugc2aiuj3"
 window/size/viewport_width=1100
 window/size/viewport_height=1100
 
+[global_group]
+
+Snowman="for snowmen"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
