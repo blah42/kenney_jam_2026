@@ -14,6 +14,7 @@ var map9 = preload("res://Assets/MapSegments/MapSegment10.res")
 var map10 = preload("res://Assets/MapSegments/MapSegment11.res")
 
 
+var wolfProb = 1
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var character = preload("res://Skiier.tscn").instantiate()
@@ -24,6 +25,13 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	wolfProb = randi()%100
+	if $Enemies.get_child_count()==0:
+		if wolfProb==1:
+			var wolfy = preload("res://wolf.tscn").instantiate()
+			wolfy.position = Vector2($Player.get_child(0).position.x, -150)
+			$Enemies.add_child(wolfy, true)
+	
 	$Score.text = str(Global.score)
 	Global.score = Global.score + 1
 	mapMove(map_speed,delta)

@@ -7,20 +7,24 @@ var state = 0
 var lose = false
 
 func _ready() -> void:
+	Global.playerState = state
 	$EndScreen.hide()
 
 func _physics_process(delta: float) -> void:
 
 	var inputDir = Input.get_vector("Move Left", "Move Right", "Move Up", "Move Down")
 	velocity = inputDir * SPEED
+	Global.playerVelocity = velocity
 	move_and_slide()
 	#print(position)
 	if Input.is_action_just_pressed("Scale"):
 		if state==0:
 			state = 1
+			Global.playerState = 1
 			$AnimatedSprite2D.scale = Vector2(2, 2)
 		else:
 			state = 0
+			Global.playerState = 0
 			$AnimatedSprite2D.scale = Vector2(1, 1)
 			
 	if velocity.length() > 0:
@@ -29,7 +33,7 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.stop()
 		
 func _on_area_2d_area_entered(area: Area2D) -> void:
-		#print(area.name)
+		print(area.name)
 		if area.name == "flag":
 			score()
 		if area.name == "GateScore":
@@ -42,6 +46,10 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 				loseState()
 		elif area.name=="Tree":
 			loseState()
+		elif area.name=="Wolf":
+			if state==0:
+				loseState()
+				
 func score():
 	pass
 func loseState():
