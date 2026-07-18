@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://bl8xlfhkn86ol"]
+
+[ext_resource type="Script" uid="uid://cdd7dmq3ccoks" path="res://titlescreen.gd" id="1_tic01"]
+[ext_resource type="PackedScene" uid="uid://bqugsrr3byxnm" path="res://Assets/MapSegments/MapSegment1.res" id="2_3b4xv"]
+[ext_resource type="Theme" uid="uid://cup1lbrwb8kmn" path="res://button.tres" id="3_3b4xv"]
+
+[node name="Titlescreen" type="Node2D" unique_id=1521418637]
+script = ExtResource("1_tic01")
+
+[node name="Map" type="Node2D" parent="." unique_id=2001627141]
+
+[node name="MapSegment0" parent="Map" unique_id=1013950515 instance=ExtResource("2_3b4xv")]
+position = Vector2(0, -288)
+
+[node name="MapSegment1" parent="Map" unique_id=24354521 instance=ExtResource("2_3b4xv")]
+position = Vector2(0, -144)
+
+[node name="MapSegment2" parent="Map" unique_id=1086675263 instance=ExtResource("2_3b4xv")]
+
+[node name="MapSegment3" parent="Map" unique_id=33711590 instance=ExtResource("2_3b4xv")]
+position = Vector2(0, 144)
+
+[node name="MapSegment4" parent="Map" unique_id=1272852953 instance=ExtResource("2_3b4xv")]
+position = Vector2(0, 288)
+
+[node name="Player" type="Node2D" parent="." unique_id=1387407310]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1953882884]
+offset = Vector2(8, 0)
+zoom = Vector2(4.2, 4.2)
+
+[node name="Node" type="Node" parent="." unique_id=345868180]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=649014506]
+offset_left = -72.0
+offset_top = 39.0
+offset_right = 73.0
+offset_bottom = 105.0
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=371120419]
+layout_mode = 2
+theme = ExtResource("3_3b4xv")
+text = "start"
+
+[node name="HowToPlay" type="Button" parent="VBoxContainer" unique_id=1952525145]
+layout_mode = 2
+theme = ExtResource("3_3b4xv")
+text = "how to play"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=669932648]
+offset_left = -68.0
+offset_top = -88.0
+offset_right = 69.0
+offset_bottom = -48.0
+theme = ExtResource("3_3b4xv")
+text = "scaling mountians"
