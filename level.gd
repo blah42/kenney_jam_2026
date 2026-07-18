@@ -1,6 +1,6 @@
 extends Node2D
 
-var map_speed = 140 
+var map_speed = 100 
 const screen_height = 9*16
 var map1 = preload("res://Assets/MapSegments/MapSegment1.res")
 var map2 = preload("res://Assets/MapSegments/MapSegment5.res")
