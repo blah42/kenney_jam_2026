@@ -8,7 +8,6 @@ var lose = false
 
 func _ready() -> void:
 	Global.playerState = state
-	$EndScreen.hide()
 
 func _physics_process(delta: float) -> void:
 	var inputDir = Input.get_vector("Move Left", "Move Right", "Move Up", "Move Down")
@@ -16,6 +15,7 @@ func _physics_process(delta: float) -> void:
 	Global.playerVelocity = velocity
 	move_and_slide()
 	#print(position)
+	if(self.global_position.y > 150 or self.global_position.y < -150 ): loseState()# bounds player location
 	if Input.is_action_just_pressed("Scale"):
 		if state==0:
 			state = 1
@@ -51,6 +51,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		elif area.name=="Wolf":
 			if state==0:
 				loseState()
+			else:
+				score(50)
 				
 func score(amount: int):
 	Global.score += amount

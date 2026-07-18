@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cc5g72uuf00tt" path="res://level.gd" id="1_t7iv1"]
 [ext_resource type="PackedScene" uid="uid://bqugsrr3byxnm" path="res://Assets/MapSegments/MapSegment1.res" id="2_2nifc"]
 [ext_resource type="Theme" uid="uid://cup1lbrwb8kmn" path="res://button.tres" id="3_2nifc"]
+[ext_resource type="PackedScene" uid="uid://cocng8dmhg3tx" path="res://Assets/MapSegments/MapSegment13.res" id="3_q4iis"]
+[ext_resource type="PackedScene" uid="uid://cvdjp48f05id6" path="res://Assets/MapSegments/MapSegment15.res" id="5_m3clv"]
 
 [node name="Level" type="Node2D" unique_id=1521418637]
 script = ExtResource("1_t7iv1")
@@ -17,11 +19,52 @@ position = Vector2(0, -144)
 
 [node name="MapSegment2" parent="Map" unique_id=1086675263 instance=ExtResource("2_2nifc")]
 
-[node name="MapSegment3" parent="Map" unique_id=33711590 instance=ExtResource("2_2nifc")]
-position = Vector2(0, 144)
+[node name="MapSegment3" parent="Map" unique_id=1354365362 instance=ExtResource("3_q4iis")]
+position = Vector2(0, 143)
 
-[node name="MapSegment4" parent="Map" unique_id=1272852953 instance=ExtResource("2_2nifc")]
-position = Vector2(0, 288)
+[node name="RichTextLabel3" type="RichTextLabel" parent="Map/MapSegment3" unique_id=341884001]
+z_index = 7
+offset_left = -61.0
+offset_top = -42.0
+offset_right = 55.0
+offset_bottom = 22.0
+scale = Vector2(0.39, 0.39)
+theme = ExtResource("3_2nifc")
+text = "flags score if small"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="Map/MapSegment3" unique_id=1255459133]
+z_index = 7
+offset_left = 32.0
+offset_top = -38.0
+offset_right = 148.0
+offset_bottom = 26.0
+scale = Vector2(0.39, 0.39)
+theme = ExtResource("3_2nifc")
+text = "gates score if big"
+
+[node name="MapSegment4" parent="Map" unique_id=1925729921 instance=ExtResource("5_m3clv")]
+position = Vector2(0, 287)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Map/MapSegment4" unique_id=997663412]
+z_index = 7
+offset_left = 43.0
+offset_top = -32.0
+offset_right = 159.0
+offset_bottom = 57.74359
+scale = Vector2(0.39, 0.39)
+theme = ExtResource("3_2nifc")
+text = "wolves can be squished if big"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Map/MapSegment4" unique_id=351647365]
+z_index = 7
+offset_left = -81.0
+offset_top = -37.0
+offset_right = 35.0
+offset_bottom = 80.94873
+scale = Vector2(0.39, 0.39)
+theme = ExtResource("3_2nifc")
+text = "snowmen score if big
+hurt if small"
 
 [node name="Player" type="Node2D" parent="." unique_id=1387407310]
 

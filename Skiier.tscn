@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://3ct8j2l2sdl5" path="res://skiier.gd" id="1_tveen"]
 [ext_resource type="Texture2D" uid="uid://s8ye1p4fypw6" path="res://kenney_tiny-ski/Tiles/tile_0070.png" id="2_m6gw1"]
 [ext_resource type="Texture2D" uid="uid://cbhhxffkurdlq" path="res://kenney_tiny-ski/Tiles/tile_0071.png" id="3_m6gw1"]
-[ext_resource type="Theme" uid="uid://cup1lbrwb8kmn" path="res://button.tres" id="4_fpnxl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_34hwx"]
 animations = [{
@@ -49,30 +48,4 @@ shape = SubResource("RectangleShape2D_4hbd8")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Skiier" unique_id=229203372]
 shape = SubResource("RectangleShape2D_34hwx")
 
-[node name="EndScreen" type="VBoxContainer" parent="." unique_id=1884196892]
-process_mode = 3
-z_index = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -21.0
-offset_top = -35.0
-offset_right = 203.0
-offset_bottom = 33.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("4_fpnxl")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="EndScreen" unique_id=19515289]
-propagate_maximum_size = true
-layout_mode = 2
-text = "game over"
-fit_content = true
-
-[node name="Button" type="Button" parent="EndScreen" unique_id=1069454600]
-layout_mode = 2
-theme = ExtResource("4_fpnxl")
-text = "restart"
-
 [connection signal="area_entered" from="Skiier" to="." method="_on_area_2d_area_entered"]
-[connection signal="pressed" from="EndScreen/Button" to="." method="_on_button_pressed"]
