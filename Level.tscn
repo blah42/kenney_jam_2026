@@ -21,7 +21,7 @@ position = Vector2(0, -144)
 [node name="MapSegment2" parent="Map" unique_id=1086675263 instance=ExtResource("2_2nifc")]
 
 [node name="MapSegment3" parent="Map" unique_id=1354365362 instance=ExtResource("3_q4iis")]
-position = Vector2(0, 143)
+position = Vector2(0, 144)
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="Map/MapSegment3" unique_id=341884001]
 z_index = 7
@@ -44,7 +44,7 @@ theme = ExtResource("3_2nifc")
 text = "gates score if big"
 
 [node name="MapSegment4" parent="Map" unique_id=1925729921 instance=ExtResource("5_m3clv")]
-position = Vector2(0, 287)
+position = Vector2(0, 288)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Map/MapSegment4" unique_id=997663412]
 z_index = 7

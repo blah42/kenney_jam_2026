@@ -71,8 +71,9 @@ visible = false
 z_index = 30
 offset_left = -72.0
 offset_top = -41.0
-offset_right = 82.0
-offset_bottom = 105.0
+offset_right = 222.0
+offset_bottom = 215.0
+scale = Vector2(0.5, 0.5)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HowToPlay" unique_id=1823128264]
 layout_mode = 2
@@ -87,7 +88,8 @@ fit_content = true
 layout_mode = 2
 theme = ExtResource("3_3b4xv")
 theme_override_font_sizes/normal_font_size = 12
-text = "space to scale
+text = "space 
+to grow
 "
 fit_content = true
 
@@ -96,6 +98,7 @@ layout_mode = 2
 theme = ExtResource("3_3b4xv")
 theme_override_font_sizes/normal_font_size = 12
 text = "get as far as you can
+gates and flags give points
 "
 fit_content = true
 
