@@ -25,7 +25,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	wolfProb = randi()%100
+	wolfProb = randi()%10
 	if $Enemies.get_child_count()==0:
 		if wolfProb==1:
 			var wolfy = preload("res://wolf.tscn").instantiate()
