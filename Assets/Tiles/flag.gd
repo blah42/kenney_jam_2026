@@ -14,4 +14,5 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	if(area.name == "Skiier" and Global.playerState == 0):
 		$Sprite2D.texture = load("res://kenney_tiny-ski/Tiles/tile_0021.png")
