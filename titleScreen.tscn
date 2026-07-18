@@ -5,6 +5,7 @@
 [ext_resource type="Theme" uid="uid://cup1lbrwb8kmn" path="res://button.tres" id="3_3b4xv"]
 
 [node name="Titlescreen" type="Node2D" unique_id=1521418637]
+texture_filter = 1
 script = ExtResource("1_tic01")
 
 [node name="Map" type="Node2D" parent="." unique_id=2001627141]
@@ -31,24 +32,24 @@ zoom = Vector2(4.2, 4.2)
 
 [node name="Node" type="Node" parent="." unique_id=345868180]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=649014506]
+[node name="StartMenu" type="VBoxContainer" parent="." unique_id=649014506]
 z_index = 30
 offset_left = -72.0
 offset_top = 39.0
 offset_right = 82.0
 offset_bottom = 105.0
 
-[node name="Start" type="Button" parent="VBoxContainer" unique_id=371120419]
+[node name="Start" type="Button" parent="StartMenu" unique_id=371120419]
 layout_mode = 2
 theme = ExtResource("3_3b4xv")
 text = "start"
 
-[node name="HowToPlay" type="Button" parent="VBoxContainer" unique_id=1952525145]
+[node name="HowToPlay" type="Button" parent="StartMenu" unique_id=1952525145]
 layout_mode = 2
 theme = ExtResource("3_3b4xv")
 text = "how to play"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=669932648]
+[node name="Title" type="RichTextLabel" parent="." unique_id=669932648]
 z_index = 30
 offset_left = -68.0
 offset_top = -88.0
@@ -56,3 +57,45 @@ offset_right = 69.0
 offset_bottom = -48.0
 theme = ExtResource("3_3b4xv")
 text = "scaling mountians"
+
+[node name="HowToPlay" type="VBoxContainer" parent="." unique_id=2041284506]
+visible = false
+z_index = 30
+offset_left = -72.0
+offset_top = -41.0
+offset_right = 82.0
+offset_bottom = 105.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HowToPlay" unique_id=1823128264]
+layout_mode = 2
+theme = ExtResource("3_3b4xv")
+theme_override_font_sizes/normal_font_size = 12
+text = "w a s d 
+to move
+"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="HowToPlay" unique_id=1943313391]
+layout_mode = 2
+theme = ExtResource("3_3b4xv")
+theme_override_font_sizes/normal_font_size = 12
+text = "space to scale
+"
+fit_content = true
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="HowToPlay" unique_id=389515603]
+layout_mode = 2
+theme = ExtResource("3_3b4xv")
+theme_override_font_sizes/normal_font_size = 12
+text = "get as far as you can
+"
+fit_content = true
+
+[node name="OK" type="Button" parent="HowToPlay" unique_id=378366672]
+layout_mode = 2
+theme = ExtResource("3_3b4xv")
+text = "ok"
+
+[connection signal="pressed" from="StartMenu/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="StartMenu/HowToPlay" to="." method="_on_how_to_play_pressed"]
+[connection signal="pressed" from="HowToPlay/OK" to="." method="_on_ok_pressed"]

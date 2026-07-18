@@ -37,3 +37,22 @@ func mapMove(speed,delta):
 			$Map.add_child(d)
 			d.global_position = c
 pass
+
+
+func _on_start_pressed() -> void:
+	get_tree().change_scene_to_file("res://Level.tscn")
+	pass # Replace with function body.
+
+
+func _on_ok_pressed() -> void:
+	$StartMenu.show()
+	$Title.show()
+	$HowToPlay.hide()
+	pass # Replace with function body.
+
+
+func _on_how_to_play_pressed() -> void:
+	$StartMenu.hide()
+	$Title.hide()
+	$HowToPlay.show()
+	pass # Replace with function body.
