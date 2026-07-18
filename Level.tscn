@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cc5g72uuf00tt" path="res://level.gd" id="1_t7iv1"]
 [ext_resource type="PackedScene" uid="uid://bqugsrr3byxnm" path="res://Assets/MapSegments/MapSegment1.res" id="2_2nifc"]
+[ext_resource type="Theme" uid="uid://cup1lbrwb8kmn" path="res://button.tres" id="3_2nifc"]
 
 [node name="Level" type="Node2D" unique_id=1521418637]
 script = ExtResource("1_t7iv1")
@@ -30,4 +31,9 @@ zoom = Vector2(4.2, 4.2)
 
 [node name="Node" type="Node" parent="." unique_id=345868180]
 
-[node name="Score" type="Node2D" parent="." unique_id=1137086383]
+[node name="Score" type="RichTextLabel" parent="." unique_id=1200740378]
+z_index = 2
+offset_top = -33.0
+offset_right = 107.0
+offset_bottom = 1.0
+theme = ExtResource("3_2nifc")
