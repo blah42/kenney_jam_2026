@@ -55,7 +55,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 				loseState()
 				
 func score():
-	Global.score += 1
+	Global.score += 10
 	pass
 func loseState():
 	get_tree().change_scene_to_file("res://endScreen.tscn")
