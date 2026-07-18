@@ -42,8 +42,8 @@ zoom = Vector2(4.2, 4.2)
 [node name="Score" type="RichTextLabel" parent="." unique_id=1508695662]
 z_index = 30
 z_as_relative = false
-offset_left = -7.0
-offset_top = -68.0
+offset_left = -9.0
+offset_top = -69.0
 offset_right = 97.0
 offset_bottom = -46.0
 theme = ExtResource("3_fwu3s")
@@ -88,6 +88,7 @@ fit_content = true
 [node name="Button" type="Button" parent="EndScreen" unique_id=1801694196]
 layout_mode = 2
 theme = ExtResource("3_fwu3s")
+disabled = true
 shortcut = SubResource("Shortcut_8ypyg")
 text = "restart"
 

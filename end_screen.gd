@@ -7,14 +7,20 @@ const screen_height = 9*16
 var map1 = preload("res://Assets/MapSegments/MapSegment1.res")
 var map2 = preload("res://Assets/MapSegments/MapSegment5.res")
 var map3 = preload("res://Assets/MapSegments/MapSegment3.res")
+var screentime = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	screentime = 0
+	$EndScreen/Button.disabled = true
 	$Score.text = str(Global.score)
 	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if(screentime > .1):
+		$EndScreen/Button.disabled = false
+	screentime= screentime+delta
 	mapMove(map_speed,delta)
 func mapMove(speed,delta):
 	$Map.move_local_y(-delta*speed)
