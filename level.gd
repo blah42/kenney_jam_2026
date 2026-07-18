@@ -1,6 +1,6 @@
 extends Node2D
 
-var map_speed = 170 
+var map_speed = 100 
 const screen_height = 9*16
 var map1 = preload("res://Assets/MapSegments/MapSegment1.res")
 var map2 = preload("res://Assets/MapSegments/MapSegment5.res")
@@ -12,7 +12,7 @@ var map7 = preload("res://Assets/MapSegments/MapSegment8.res")
 var map8 = preload("res://Assets/MapSegments/MapSegment9.res")
 var map9 = preload("res://Assets/MapSegments/MapSegment10.res")
 var map10 = preload("res://Assets/MapSegments/MapSegment11.res")
-
+var scoretime = 0
 
 var wolfProb = 1
 # Called when the node enters the scene tree for the first time.
@@ -33,7 +33,10 @@ func _process(delta: float) -> void:
 			$Enemies.add_child(wolfy, true)
 	
 	$Score.text = str(Global.score)
-	Global.score = Global.score + 1
+	if(scoretime > 1):
+		Global.score = Global.score + 1
+		scoretime = 0
+	scoretime += delta
 	mapMove(map_speed,delta)
 	if($Player.global_position.y > 0): get_tree().quit() #replace with score and title screen
 	pass
