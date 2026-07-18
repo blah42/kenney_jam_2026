@@ -26,6 +26,7 @@ AudioStreamPlayerGlobal="*uid://dlja0qq1wqylc"
 
 window/size/viewport_width=1100
 window/size/viewport_height=1100
+window/size/resizable=false
 
 [global_group]
 
