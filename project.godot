@@ -13,7 +13,9 @@ config_version=5
 config/name="kenny_jam_2026"
 run/main_scene="uid://bl8xlfhkn86ol"
 config/features=PackedStringArray("4.7")
+boot_splash/image="uid://cxf8e3415st58"
 config/icon="res://icon.png"
+boot_splash/minimum_display_time=200
 
 [autoload]
 
