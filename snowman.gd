@@ -13,6 +13,7 @@ func _process(delta: float) -> void:
 
 
 func _on_area_entered(area: Area2D) -> void:
-	if Global.playerState==1:
-		$Sprite2D.scale.y = .2
-		$CollisionShape2D.disabled = true
+	if(area.name == "Skiier"):
+		if Global.playerState==1:
+			$Sprite2D.scale.y = .2
+			$CollisionShape2D.disabled = true
