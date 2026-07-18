@@ -4,6 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://bqugsrr3byxnm" path="res://Assets/MapSegments/MapSegment1.res" id="2_rp5ay"]
 [ext_resource type="Theme" uid="uid://cup1lbrwb8kmn" path="res://button.tres" id="3_fwu3s"]
 
+[sub_resource type="InputEventAction" id="InputEventAction_670qs"]
+action = &"ui_accept"
+
+[sub_resource type="Shortcut" id="Shortcut_8ypyg"]
+events = [SubResource("InputEventAction_670qs")]
+
 [node name="endscreen" type="Node2D" unique_id=1521418637]
 texture_filter = 1
 script = ExtResource("1_670qs")
@@ -75,6 +81,7 @@ fit_content = true
 [node name="Button" type="Button" parent="EndScreen" unique_id=1801694196]
 layout_mode = 2
 theme = ExtResource("3_fwu3s")
+shortcut = SubResource("Shortcut_8ypyg")
 text = "restart"
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="EndScreen" unique_id=1013915998]

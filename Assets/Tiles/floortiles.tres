@@ -2,6 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://cty0g7a5ie33r" path="res://Assets/Tiles/flooratlas.tres" id="1_k2gfc"]
 
+[sub_resource type="TileMapPattern" id="TileMapPattern_k2gfc"]
+tile_data = PackedInt32Array(0, 65536, 4, 1, 65536, 4, 2, 65536, 4, 3, 65536, 4, 4, 65536, 4, 5, 65536, 4, 6, 65536, 0, 7, 131072, 0, 8, 196608, 0, 9, 262144, 0, 10, 65536, 4, 11, 65536, 4, 12, 65536, 4, 13, 65536, 4, 14, 65536, 4, 15, 65536, 4, 16, 65536, 4)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_xf2iu"]
+tile_data = PackedInt32Array(0, 65536, 4, 1, 65536, 4, 2, 65536, 4, 3, 65536, 4, 4, 65536, 4, 5, 65536, 4, 6, 65536, 0, 7, 131072, 0, 8, 196608, 0, 9, 262144, 0, 10, 65536, 4, 11, 65536, 4, 12, 65536, 4, 13, 65536, 4, 14, 65536, 4, 15, 65536, 4, 16, 65536, 4)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cpctc"]
 texture = ExtResource("1_k2gfc")
 separation = Vector2i(1, 1)
@@ -140,3 +146,5 @@ separation = Vector2i(1, 1)
 
 [resource]
 sources/0 = SubResource("TileSetAtlasSource_cpctc")
+pattern_0 = SubResource("TileMapPattern_k2gfc")
+pattern_1 = SubResource("TileMapPattern_xf2iu")

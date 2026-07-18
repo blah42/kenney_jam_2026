@@ -4,6 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://bqugsrr3byxnm" path="res://Assets/MapSegments/MapSegment1.res" id="2_3b4xv"]
 [ext_resource type="Theme" uid="uid://cup1lbrwb8kmn" path="res://button.tres" id="3_3b4xv"]
 
+[sub_resource type="InputEventAction" id="InputEventAction_tu3jk"]
+action = &"ui_accept"
+
+[sub_resource type="Shortcut" id="Shortcut_rp5ay"]
+events = [SubResource("InputEventAction_tu3jk")]
+
 [node name="Titlescreen" type="Node2D" unique_id=1521418637]
 texture_filter = 1
 script = ExtResource("1_tic01")
@@ -42,6 +48,7 @@ offset_bottom = 105.0
 [node name="Start" type="Button" parent="StartMenu" unique_id=371120419]
 layout_mode = 2
 theme = ExtResource("3_3b4xv")
+shortcut = SubResource("Shortcut_rp5ay")
 text = "start"
 
 [node name="HowToPlay" type="Button" parent="StartMenu" unique_id=1952525145]
