@@ -11,7 +11,6 @@ func _ready() -> void:
 	$EndScreen.hide()
 
 func _physics_process(delta: float) -> void:
-
 	var inputDir = Input.get_vector("Move Left", "Move Right", "Move Up", "Move Down")
 	velocity = inputDir * SPEED
 	Global.playerVelocity = velocity
@@ -33,17 +32,16 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.stop()
 		
 func _on_area_2d_area_entered(area: Area2D) -> void:
-		print(area.name)
 		if area.name == "flag":
 			if state == 0:
 				score()
-		if area.name == "GateScore":
+		elif area.name == "GateScore":
 			if state == 1:
 				score()
-		if area.name == "Skilift":
+		elif area.name == "Skilift":
 			if state == 1:
 				loseState()
-		elif area.name == "Snowman":
+		elif area.is_in_group("Snowman"):
 			if state == 0:
 				loseState()
 			if state == 1:
@@ -56,7 +54,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 				
 func score():
 	Global.score += 10
-	pass
+	
 func loseState():
 	get_tree().change_scene_to_file("res://endScreen.tscn")
 

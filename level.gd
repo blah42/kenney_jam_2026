@@ -25,7 +25,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	wolfProb = randi()%10
+	wolfProb = randi()%100
 	if $Enemies.get_child_count()==0:
 		if wolfProb==1:
 			var wolfy = preload("res://wolf.tscn").instantiate()
@@ -50,7 +50,8 @@ func mapMove(speed,delta):
 			var c = i.global_position
 			#print(i)
 			i.queue_free()
-			var randMap = randi_range(1,11)
+			#var randMap = randi_range(1,11)
+			var randMap = 9
 			var d
 			match randMap:
 				1:
