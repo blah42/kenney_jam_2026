@@ -20,3 +20,6 @@ Art: 2D Assets from Kenney Tiny Ski Pack
 BG Music: Snow is Coming by geoffharvey on Pixabay 
 
 This game was made for the Kenney Jam 2026
+
+Play it here!
+https://itch.io/game/edit/4793031
