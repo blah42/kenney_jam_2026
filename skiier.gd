@@ -58,6 +58,8 @@ func score(amount: int):
 	Global.score += amount
 	
 func loseState():
+	if Global.score > Global.highScore:
+		Global.highScore = Global.score
 	get_tree().change_scene_to_file("res://endScreen.tscn")
 
 func _on_button_pressed() -> void:

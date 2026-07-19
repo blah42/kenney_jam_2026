@@ -39,17 +39,6 @@ zoom = Vector2(4.2, 4.2)
 
 [node name="Node" type="Node" parent="." unique_id=345868180]
 
-[node name="Score" type="RichTextLabel" parent="." unique_id=1508695662]
-z_index = 30
-z_as_relative = false
-offset_left = -9.0
-offset_top = -69.0
-offset_right = 97.0
-offset_bottom = -46.0
-theme = ExtResource("3_fwu3s")
-text = "score"
-fit_content = true
-
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=558461029]
 z_index = 68
 position = Vector2(0, 99.99999)
@@ -59,15 +48,11 @@ texture = ExtResource("4_rp5ay")
 [node name="EndScreen" type="VBoxContainer" parent="." unique_id=1770052165]
 process_mode = 3
 z_index = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -92.0
-offset_top = -105.0
-offset_right = 99.0
-offset_bottom = 77.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = -107.0
+offset_top = -110.0
+offset_right = 120.75
+offset_bottom = 117.0
+scale = Vector2(0.8, 0.8)
 theme = ExtResource("3_fwu3s")
 theme_override_constants/separation = 20
 alignment = 1
@@ -77,13 +62,24 @@ propagate_maximum_size = true
 layout_mode = 2
 text = "game over"
 fit_content = true
-horizontal_alignment = 1
+tab_size = 0
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="EndScreen" unique_id=479086909]
 propagate_maximum_size = true
 layout_mode = 2
-text = "score; "
+text = "highscore"
 fit_content = true
+autowrap_mode = 0
+tab_size = 0
+
+[node name="Score" type="RichTextLabel" parent="EndScreen" unique_id=1508695662]
+z_index = 30
+z_as_relative = false
+layout_mode = 2
+theme = ExtResource("3_fwu3s")
+text = "score"
+fit_content = true
+tab_size = 0
 
 [node name="Button" type="Button" parent="EndScreen" unique_id=1801694196]
 layout_mode = 2
