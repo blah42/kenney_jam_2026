@@ -12,8 +12,9 @@ var screentime = 0
 func _ready() -> void:
 	screentime = 0
 	$EndScreen/Button.disabled = true
-	$Score.text = str(Global.score)
-	pass
+	$EndScreen/RichTextLabel2.text = "highscore   " + str(Global.highScore)
+	$EndScreen/Score.text = "score    " + str(Global.score)
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -28,7 +28,7 @@ var map23 = preload("res://Assets/MapSegments/MapSegment24.res")
 var scoretime = 0
 var lowerBound = 5
 var wolfProb = 1
-var wolfRate = 1000
+var wolfRate = 3000
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var character = preload("res://Skiier.tscn").instantiate()
@@ -43,7 +43,7 @@ func _process(delta: float) -> void:
 		map_speed = 100
 	if Global.score>500:
 		lowerBound = 23
-		wolfRate = 200
+		wolfRate = 500
 	wolfProb = randi()%wolfRate
 	if $Enemies.get_child_count()==0:
 		if wolfProb==1:
