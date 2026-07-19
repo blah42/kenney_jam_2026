@@ -22,6 +22,9 @@ var map17 = preload("res://Assets/MapSegments/MapSegment18.res")
 var map18 = preload("res://Assets/MapSegments/MapSegment19.res")
 var map19 = preload("res://Assets/MapSegments/MapSegment20.res")
 var map20 = preload("res://Assets/MapSegments/MapSegment21.res")
+var map21 = preload("res://Assets/MapSegments/MapSegment22.res")
+var map22 = preload("res://Assets/MapSegments/MapSegment23.res")
+var map23 = preload("res://Assets/MapSegments/MapSegment24.res")
 var scoretime = 0
 var lowerBound = 5
 var wolfProb = 1
@@ -39,7 +42,7 @@ func _process(delta: float) -> void:
 	if Global.tutorial == 3:
 		map_speed = 100
 	if Global.score>500:
-		lowerBound = 20
+		lowerBound = 23
 		wolfRate = 200
 	wolfProb = randi()%wolfRate
 	if $Enemies.get_child_count()==0:
@@ -89,6 +92,12 @@ func mapMove(speed,delta):
 					d = map19.instantiate()
 				20:
 					d = map20.instantiate()
+				21:
+					d = map21.instantiate()
+				22:
+					d = map22.instantiate()
+				23:
+					d = map23.instantiate()
 				6:
 					d = map6.instantiate()
 				7:
